@@ -1,13 +1,12 @@
-/* Encabezado con layout dividido */
+/* Encabezado */
 .header {
     background-color: var(--primary-color);
     color: white;
     padding: 1.5rem 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    animation: fadeIn 0.6s ease;
 }
 
-.header-content.split-layout {
+.header-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -17,15 +16,18 @@
     flex-wrap: wrap;
 }
 
-.header-logo {
-    height: 100px;
-    width: auto;
+.header-left {
     flex-shrink: 0;
 }
 
-.header-text {
+.header-logo {
+    height: 100px;
+    width: auto;
+}
+
+.header-right {
     text-align: right;
-    flex: 1;
+    flex-grow: 1;
 }
 
 .header-title {
@@ -43,15 +45,18 @@
 
 /* Responsive para móviles */
 @media (max-width: 600px) {
-    .header-content.split-layout {
+    .header-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .header-text {
+    .header-left {
+        margin-bottom: 1rem;
+    }
+
+    .header-right {
         text-align: center;
-        margin-top: 1rem;
     }
 
     .header-logo {
