@@ -193,7 +193,7 @@ body {
 }
 
 .tree-image {
-    width: 40%;
+    width: 20%;
     height: auto;
     display: block;
     transition: transform 0.3s ease;
