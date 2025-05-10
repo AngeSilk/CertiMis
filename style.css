@@ -465,3 +465,28 @@ footer {
 .modal-content #modal-image {
     border-radius: 15px; /* Ajusta este valor a la cantidad de redondeo que desees */
 }
+
+Para colocar los logos dentro de círculos blancos, puedes agregar el siguiente código CSS a tu archivo style.css. Esto creará un contenedor circular alrededor de cada logo:
+
+CSS
+
+.cert-logo-container {
+  width: 100px; /* Ajusta el tamaño del círculo según sea necesario */
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Asegura que la imagen no se salga del círculo */
+}
+
+.cert-logo-container img {
+  max-width: 80%; /* Ajusta el tamaño de la imagen dentro del círculo */
+  max-height: 80%;
+  display: block;
+}
+
+.cert-logo {
+  display: none; /* Oculta las imágenes originales */
+}
