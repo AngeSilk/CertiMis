@@ -295,11 +295,11 @@ footer {
   }
 
   .header-title {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .subtitle {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .tree-content {
@@ -308,7 +308,7 @@ footer {
   }
 
   .tree-image-container {
-    max-width: 200px;
+    max-width: 100px;
   }
 
   .tree-details {
