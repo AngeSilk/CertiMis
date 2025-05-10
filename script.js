@@ -7,7 +7,9 @@ const treeDatabase = {
         location: "San Pedro, Misiones (-26.6234, -54.1088)",
         certification: "FSC Certificado",
         certificationStatus: "active",
-        additionalInfo: "Cosechado bajo pautas sostenibles. Plantación de 12 años."
+        additionalInfo: "Cosechado bajo pautas sostenibles. Plantación de 12 años.",
+        imageUrl: "/api/placeholder/400/300",
+        imageAlt: "Pino Elliotis"
     },
     "tree-002": {
         id: "tree-002",
@@ -16,7 +18,9 @@ const treeDatabase = {
         location: "Eldorado, Misiones (-26.4088, -54.6232)",
         certification: "PEFC Certificado",
         certificationStatus: "active",
-        additionalInfo: "Especie nativa bajo manejo forestal sostenible."
+        additionalInfo: "Especie nativa bajo manejo forestal sostenible.",
+        imageUrl: "/api/placeholder/400/300",
+        imageAlt: "Araucaria angustifolia"
     },
     "tree-003": {
         id: "tree-003",
@@ -25,7 +29,9 @@ const treeDatabase = {
         location: "Posadas, Misiones (-27.3621, -55.9007)",
         certification: "En proceso de certificación",
         certificationStatus: "pending",
-        additionalInfo: "Plantación gestionada con criterios FSC, certificación en trámite."
+        additionalInfo: "Plantación gestionada con criterios FSC, certificación en trámite.",
+        imageUrl: "/api/placeholder/400/300",
+        imageAlt: "Eucalipto grandis"
     },
     "tree-004": {
         id: "tree-004",
@@ -34,7 +40,9 @@ const treeDatabase = {
         location: "Oberá, Misiones (-27.4828, -55.1202)",
         certification: "FSC Certificado",
         certificationStatus: "active",
-        additionalInfo: "Plantación de 15 años. Madera destinada a exportación."
+        additionalInfo: "Plantación de 15 años. Madera destinada a exportación.",
+        imageUrl: "/api/placeholder/400/300",
+        imageAlt: "Pino Taeda"
     }
 };
 
@@ -150,6 +158,16 @@ function displayTreeInfo(treeData) {
         document.getElementById('tree-additional-info-container').style.display = 'flex';
     } else {
         document.getElementById('tree-additional-info-container').style.display = 'none';
+    }
+    
+    // Actualizar la imagen del árbol
+    if (treeData.imageUrl) {
+        const treeImageElement = document.getElementById('tree-image');
+        treeImageElement.src = treeData.imageUrl;
+        treeImageElement.alt = treeData.imageAlt || treeData.species;
+        document.getElementById('tree-image-container').style.display = 'block';
+    } else {
+        document.getElementById('tree-image-container').style.display = 'none';
     }
     
     // Configurar el badge de certificación
