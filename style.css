@@ -126,6 +126,26 @@ h1 {
     background-repeat: no-repeat;
 }
 
+/* Estilos para la imagen del árbol */
+.tree-image-container {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tree-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.tree-image:hover {
+    transform: scale(1.02);
+}
+
 .tree-details {
     display: flex;
     flex-direction: column;
