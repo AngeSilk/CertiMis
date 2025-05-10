@@ -309,6 +309,7 @@ footer {
 
   .tree-image-container {
     max-width: 400px;
+    height: auto;
   }
 
   .tree-details {
