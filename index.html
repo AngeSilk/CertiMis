@@ -1,43 +1,105 @@
-<div class="card tree-info-card" id="tree-info" style="display: none;">
-  <div class="card-header">
-    <div class="certification-badge" id="certification-badge"></div>
-    <h2>Información del árbol</h2>
-  </div>
-
-  <div class="tree-content">
-    <div class="tree-image-container" id="tree-image-container">
-      <img id="tree-image" src="" alt="Imagen de la especie" class="tree-image">
-    </div>
-
-    <div class="tree-details">
-      <div class="detail-row">
-        <span class="detail-label">ID:</span>
-        <span class="detail-value" id="tree-id">-</span>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trazabilidad Forestal Misiones</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="header-left">
+        <img src="./sources/Logo_CertiMis_Blanco.png" alt="Logo CertiMis" class="header-logo" />
       </div>
-      <div class="detail-row">
-        <span class="detail-label">Especie:</span>
-        <span class="detail-value" id="tree-species">-</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-label">Fecha de tala:</span>
-        <span class="detail-value" id="tree-date">-</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-label">Ubicación:</span>
-        <span class="detail-value" id="tree-location">-</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-label">Estado de certificación:</span>
-        <span class="detail-value" id="tree-certification">-</span>
-      </div>
-      <div class="detail-row" id="tree-additional-info-container" style="display: none;">
-        <span class="detail-label">Información adicional:</span>
-        <span class="detail-value" id="tree-additional-info">-</span>
+      <div class="header-right">
+        <h1 class="header-title">Trazabilidad de Madera</h1>
+        <p class="subtitle">Certificación forestal para Misiones</p>
       </div>
     </div>
-  </div>
+  </header>
 
-  <div class="card-actions">
-    <button id="scan-again-btn" class="button primary-button">Escanear otro código</button>
-  </div>
-</div>
+  <main>
+    <div class="container">
+      <div class="card scanner-card" id="scanner-container">
+        <h2>Escanear código QR</h2>
+        <div id="qr-reader"></div>
+        <p class="scanner-instruction">Apunte la cámara al código QR en la madera para obtener su información de trazabilidad</p>
+      </div>
+
+      <div class="card tree-info-card" id="tree-info" style="display: none;">
+        <div class="card-header">
+          <div class="certification-badge" id="certification-badge"></div>
+          <h2>Información del árbol</h2>
+        </div>
+
+        <div class="tree-content">
+          <div class="tree-image-container" id="tree-image-container">
+            <img id="tree-image" src="" alt="Imagen de la especie" class="tree-image" />
+          </div>
+
+          <div class="tree-details">
+            <div class="detail-row">
+              <span class="detail-label">ID:</span>
+              <span class="detail-value" id="tree-id">-</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Especie:</span>
+              <span class="detail-value" id="tree-species">-</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Fecha de tala:</span>
+              <span class="detail-value" id="tree-date">-</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Ubicación:</span>
+              <span class="detail-value" id="tree-location">-</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Estado de certificación:</span>
+              <span class="detail-value" id="tree-certification">-</span>
+            </div>
+            <div class="detail-row" id="tree-additional-info-container" style="display: none;">
+              <span class="detail-label">Información adicional:</span>
+              <span class="detail-value" id="tree-additional-info">-</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <button id="scan-again-btn" class="button primary-button">Escanear otro código</button>
+        </div>
+      </div>
+
+      <div class="card error-card" id="error-container" style="display: none;">
+        <div class="error-icon">❌</div>
+        <h2>Código no reconocido</h2>
+        <p>El código QR escaneado no corresponde a ningún árbol registrado en el sistema.</p>
+        <div class="card-actions">
+          <button id="try-again-btn" class="button primary-button">Intentar nuevamente</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Trazabilidad Forestal Misiones</p>
+      <div class="certification-logos">
+        <div class="logo-container">
+          <img src="./sources/FSC.png" alt="Logo FSC"/>
+        </div>
+        <div class="logo-container">
+          <img src="./sources/PEFC.png" alt="Logo PEFC"/>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
