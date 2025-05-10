@@ -473,8 +473,8 @@ footer {
 }
 
 .logo-container {
-    width: 60px; /* Tamaño del círculo pequeño */
-    height: 60px;
+    width: 80px; /* Tamaño del círculo pequeño */
+    height: 80px;
     border-radius: 50%;
     background-color: white;
     display: flex;
