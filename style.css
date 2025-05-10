@@ -28,7 +28,7 @@ body {
 }
 
 /* Estilos de encabezado */
-header {
+.header {
     background-color: var(--primary-color);
     color: white;
     padding: 1.5rem 0;
@@ -39,7 +39,18 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+}
+
+.header-logo {
+    max-height: 50px; /* Ajusta el tamaño del logo según necesites */
+    margin-right: 20px; /* Espacio entre el logo y el título */
+}
+
+.header-title {
+    margin: 0; /* Elimina el margen predeterminado del título */
 }
 
 h1 {
