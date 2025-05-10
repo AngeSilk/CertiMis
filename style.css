@@ -45,7 +45,7 @@ body {
 }
 
 .header-logo {
-    max-height: 50px; /* Ajusta el tamaño del logo según necesites */
+    max-height: 20px; /* Ajusta el tamaño del logo según necesites */
     margin-right: 20px; /* Espacio entre el logo y el título */
 }
 
