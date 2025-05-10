@@ -2,12 +2,12 @@
 const treeDatabase = {
     "tree-001": {
         id: "tree-001",
-        species: "Pino Elliotis (Pinus elliottii)",
-        harvestDate: "15/04/2025",
-        location: "San Pedro, Misiones (-26.6234, -54.1088)",
-        certification: "FSC Certificado",
+        species: " Pinus taeda",
+        harvestDate: " 15/04/2025",
+        location: " San Pedro, Misiones (-26.6234, -54.1088)",
+        certification: " FSC Certificado",
         certificationStatus: "active",
-        additionalInfo: "Cosechado bajo pautas sostenibles. Plantación de 12 años.",
+        additionalInfo: " Cosechado bajo pautas sostenibles. Plantación de 12 años.",
         imageUrl: "./sources/pino_elliotis.webp",
         imageAlt: "Pino Elliotis"
     },
