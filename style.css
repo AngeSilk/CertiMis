@@ -191,7 +191,8 @@ body {
 }
 
 .tree-image {
-    width: 40%;
+    display: block;     /* elimina espacios en blanco debajo de la img */
+    width: 100%;        /* ahora la imagen rellena todo el contenedor */
     height: auto;
     display: block;
     transition: transform 0.3s ease;
