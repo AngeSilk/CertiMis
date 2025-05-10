@@ -41,16 +41,25 @@ body {
     padding: 0 1.5rem;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    gap: 1.5rem;
 }
 
 .header-logo {
-    max-height: 20px; /* Ajusta el tamaño del logo según necesites */
-    margin-right: 20px; /* Espacio entre el logo y el título */
+    height: 60px;
+    width: auto;
 }
 
 .header-title {
-    margin: 0; /* Elimina el margen predeterminado del título */
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+}
+
+.subtitle {
+    color: white;
+    font-size: 1rem;
+    opacity: 0.9;
 }
 
 h1 {
