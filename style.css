@@ -152,7 +152,7 @@ body {
 }
 
 .tree-image-container {
-    max-width: 200px;
+    max-width: 100px;
     margin-bottom: 1.5rem;
     border-radius: var(--border-radius);
     overflow: hidden;
