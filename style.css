@@ -466,27 +466,30 @@ footer {
     border-radius: 15px; /* Ajusta este valor a la cantidad de redondeo que desees */
 }
 
-Para colocar los logos dentro de círculos blancos, puedes agregar el siguiente código CSS a tu archivo style.css. Esto creará un contenedor circular alrededor de cada logo:
-
-CSS
-
-.cert-logo-container {
-  width: 100px; /* Ajusta el tamaño del círculo según sea necesario */
-  height: 100px;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; /* Asegura que la imagen no se salga del círculo */
+.certification-logos {
+    display: flex; /* Coloca los contenedores de los logos uno al lado del otro */
+    gap: 1rem; /* Espacio entre los logos */
+    align-items: center; /* Alinea verticalmente los logos si es necesario */
 }
 
-.cert-logo-container img {
-  max-width: 80%; /* Ajusta el tamaño de la imagen dentro del círculo */
-  max-height: 80%;
-  display: block;
+.logo-container {
+    width: 40px; /* Tamaño del círculo pequeño */
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.cert-logo {
-  display: none; /* Oculta las imágenes originales */
+.logo-container img {
+    max-width: 70%; /* Ajusta el tamaño de la imagen dentro del círculo pequeño */
+    max-height: 70%;
+    display: block;
 }
+
+/* Oculta la clase .cert-logo original si aún la tienes y no la necesitas */
+/* .cert-logo {
+    display: none;
+} */
