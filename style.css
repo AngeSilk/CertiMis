@@ -22,6 +22,10 @@
     animation: zoom 0.3s ease;
 }
 
+.modal-content #modal-image {
+  border-radius: 15px; /* Ajusta este valor a la cantidad de redondeo que desees */
+}
+
 @keyframes zoom {
     from {transform: scale(0.8); opacity: 0;}
     to {transform: scale(1); opacity: 1;}
