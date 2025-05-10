@@ -8,7 +8,7 @@ const treeDatabase = {
         certification: "FSC Certificado",
         certificationStatus: "active",
         additionalInfo: "Cosechado bajo pautas sostenibles. Plantación de 12 años.",
-        imageUrl: "sources/pino_elliotis.webp",
+        imageUrl: "/sources/pino_elliotis.webp",
         imageAlt: "Pino Elliotis"
     },
     "tree-002": {
