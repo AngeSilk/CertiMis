@@ -335,33 +335,75 @@ footer {
     opacity: 1;
 }
 
-/* Media queries para responsividad */
-@media (max-width: 768px) {
-    .header-content {
-        padding: 0 1rem;
+/* Media queries para dispositivos móviles (ancho máximo de 600px, por ejemplo) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Reducir el tamaño de la fuente base */
+        line-height: 1.4; /* Ajustar la altura de línea para mejor legibilidad */
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem; /* Reducir el tamaño del título principal */
     }
 
-    .container {
-        padding: 0 1rem;
+    h2 {
+        font-size: 1.3rem; /* Reducir el tamaño de los subtítulos */
     }
 
-    .detail-row {
-        flex-direction: column;
-        gap: 0.3rem;
+    .subtitle {
+        font-size: 0.9rem; /* Reducir el tamaño del subtítulo del header */
+    }
+
+    .card {
+        padding: 1.5rem; /* Reducir el padding de las tarjetas en móviles */
+        margin-bottom: 2rem; /* Reducir el margen inferior de las tarjetas */
     }
 
     .detail-label {
-        min-width: 100%;
+        font-size: 0.85rem; /* Reducir el tamaño de las etiquetas de los detalles */
+        min-width: 120px; /* Ajustar el ancho mínimo de las etiquetas */
     }
 
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
+    .detail-value {
+        font-size: 0.85rem; /* Reducir el tamaño de los valores de los detalles */
     }
+
+    .button {
+        font-size: 0.9rem; /* Reducir el tamaño del texto de los botones */
+        padding: 0.6rem 1.2rem; /* Reducir el padding de los botones */
+    }
+
+    .scanner-instruction {
+        font-size: 0.8rem; /* Reducir el tamaño de la instrucción del escáner */
+    }
+
+    .error-icon {
+        font-size: 3rem; /* Mantener el tamaño del icono de error o ajustarlo */
+    }
+
+    .error-card h2 {
+        font-size: 1.5rem; /* Reducir el tamaño del título de error */
+    }
+
+    .close-modal {
+        font-size: 30px; /* Reducir el tamaño del botón de cerrar el modal */
+        top: -30px; /* Ajustar la posición del botón de cerrar */
+        right: 5px; /* Ajustar la posición del botón de cerrar */
+    }
+}
+
+/* Puedes agregar más media queries para diferentes tamaños de pantalla si es necesario */
+/* Por ejemplo, para tablets: */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    /* ... otros ajustes para tablets ... */
 }
 
 /* Animaciones */
