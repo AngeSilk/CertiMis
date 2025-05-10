@@ -8,7 +8,7 @@ const treeDatabase = {
         certification: "FSC Certificado",
         certificationStatus: "active",
         additionalInfo: "Cosechado bajo pautas sostenibles. Plantación de 12 años.",
-        imageUrl: "/sources/pino_elliotis.webp",
+        imageUrl: "sources/pino_elliotis.webp",
         imageAlt: "Pino Elliotis"
     },
     "tree-002": {
@@ -19,7 +19,7 @@ const treeDatabase = {
         certification: "PEFC Certificado",
         certificationStatus: "active",
         additionalInfo: "Especie nativa bajo manejo forestal sostenible.",
-        imageUrl: "/api/placeholder/400/300",
+        imageUrl: "sources/araucaria_angustifolia.webp",
         imageAlt: "Araucaria angustifolia"
     },
     "tree-003": {
@@ -30,7 +30,7 @@ const treeDatabase = {
         certification: "En proceso de certificación",
         certificationStatus: "pending",
         additionalInfo: "Plantación gestionada con criterios FSC, certificación en trámite.",
-        imageUrl: "/api/placeholder/400/300",
+        imageUrl: "sources/eucalyptus_grandis.webp",
         imageAlt: "Eucalipto grandis"
     },
     "tree-004": {
@@ -41,7 +41,7 @@ const treeDatabase = {
         certification: "FSC Certificado",
         certificationStatus: "active",
         additionalInfo: "Plantación de 15 años. Madera destinada a exportación.",
-        imageUrl: "/api/placeholder/400/300",
+        imageUrl: "sources/pino_taeda.webp",
         imageAlt: "Pino Taeda"
     }
 };
@@ -163,9 +163,32 @@ function displayTreeInfo(treeData) {
     // Actualizar la imagen del árbol
     if (treeData.imageUrl) {
         const treeImageElement = document.getElementById('tree-image');
+        const treeImageContainer = document.getElementById('tree-image-container');
+        
+        // Mostrar indicador de carga
+        treeImageContainer.classList.add('loading');
+        
+        // Cargar la imagen
         treeImageElement.src = treeData.imageUrl;
         treeImageElement.alt = treeData.imageAlt || treeData.species;
-        document.getElementById('tree-image-container').style.display = 'block';
+        
+        // Configurar eventos para manejar la carga y errores de imagen
+        treeImageElement.onload = function() {
+            treeImageContainer.classList.remove('loading');
+            treeImageContainer.style.display = 'block';
+        };
+        
+        treeImageElement.onerror = function() {
+            console.warn(`Error al cargar la imagen para ${treeData.id}`);
+            // Si la imagen falla, intentar cargar una imagen de respaldo genérica
+            treeImageElement.src = "sources/arbol_generico.webp";
+            // Si también falla la imagen de respaldo, ocultamos el contenedor
+            treeImageElement.onerror = function() {
+                treeImageContainer.style.display = 'none';
+            };
+            treeImageContainer.classList.remove('loading');
+        };
+        
     } else {
         document.getElementById('tree-image-container').style.display = 'none';
     }
